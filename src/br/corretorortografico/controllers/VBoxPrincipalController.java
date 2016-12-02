@@ -18,12 +18,37 @@ public class VBoxPrincipalController  {
 	@FXML
 	private MenuItem menuItemCorrigir;
 	@FXML
+	private MenuItem menuItemPrincipal;
+	@FXML
+	private MenuItem menuItemProjeto;
+	@FXML
 	private MenuItem menuItemEquipe;
 	
 	@FXML
 	private void handleMenuItemCorrigir() throws IOException{
 		AnchorPane ap = (AnchorPane) FXMLLoader
 				.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneToBeCorrected.fxml"));
+		this.anchorPane.getChildren().setAll(ap);
+	}
+	
+	@FXML
+	private void handleMenuItemPrincipal() throws IOException{
+		AnchorPane ap = (AnchorPane) FXMLLoader
+				.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneMain.fxml"));
+		this.anchorPane.getChildren().setAll(ap);
+	}
+	
+	@FXML
+	private void handleMenuItemProjeto() throws IOException{
+		AnchorPane ap = (AnchorPane) FXMLLoader
+				.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneProject.fxml"));
+		this.anchorPane.getChildren().setAll(ap);
+	}
+	
+	@FXML
+	private void handleMenuItemEquipe() throws IOException{
+		AnchorPane ap = (AnchorPane) FXMLLoader
+				.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneTeam.fxml"));
 		this.anchorPane.getChildren().setAll(ap);
 	}
 

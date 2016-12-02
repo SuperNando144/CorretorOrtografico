@@ -8,18 +8,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.corretorortografico.controllers.VBoxPrincipalController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.corretorortografico.controllers.VBoxPrincipalController">
 	<children>
 		<MenuBar>
 			<menus>
             <Menu mnemonicParsing="false" text="Ações">
               <items>
                 <MenuItem fx:id="menuItemCorrigir" mnemonicParsing="false" onAction="#handleMenuItemCorrigir" text="Corrigir palavra" />
+                  <MenuItem fx:id="menuItemPrincipal" mnemonicParsing="false" onAction="#handleMenuItemPrincipal" text="Principal" />
               </items>
             </Menu>
 				<Menu fx:id="menuLista" mnemonicParsing="false" text="Sobre">
 					<items>
-						<MenuItem fx:id="menuItemEquipe" mnemonicParsing="false" text="Equipe" />
+                  <MenuItem fx:id="menuItemProjeto" mnemonicParsing="false" onAction="#handleMenuItemProjeto" text="Projeto" />
+						<MenuItem fx:id="menuItemEquipe" mnemonicParsing="false" onAction="#handleMenuItemEquipe" text="Equipe" />
 					</items>
 				</Menu>
 			</menus>

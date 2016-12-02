@@ -32,28 +32,9 @@ public class AnchorPaneToBeCorrectedController {
 		AnchorPaneCorrectedController.setWordsToBeCorrected(wordsToBeCorrected);
 		AnchorPaneCorrectedController.setSuggestions(list);
 		
-		//AnchorPane ap = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneCorrected.fxml"));
-		//AnchorPaneCorrectedController controller = new AnchorPaneCorrectedController();
-		
-		
-		
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(AnchorPaneCorrectedController.class.getResource("/br/corretorortografico/views/AnchorPaneCorrected.fxml"));
-		
-		AnchorPane page = (AnchorPane) loader.load();
-		
-		Stage stage = new Stage();
-		stage.setTitle("Sign Up");
-		
-		Scene scene = new Scene(page);
-		
-		stage.setScene(scene);
-		
-		//controller.initData(wordsToBeCorrected, list);
-		//AnchorPaneCorrectedController controller = loader.getController();
-		stage.showAndWait();
-		
-		
-		//this.anchorPane.getChildren().setAll(ap);
+		AnchorPane ap = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/corretorortografico/views/AnchorPaneCorrected.fxml"));
+		AnchorPaneCorrectedController controller = new AnchorPaneCorrectedController();
+
+		this.anchorPane.getChildren().setAll(ap);
 	}
 }

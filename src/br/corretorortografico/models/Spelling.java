@@ -26,7 +26,7 @@ public class Spelling {
 					break;
 				}
 				
-				if(l.distance(temp, word.getWord()) > -3 && l.distance(temp, word.getWord()) < 3){
+				if(l.distance(temp, word.getWord()) > -6 && l.distance(temp, word.getWord()) < 6){
 					suggestions.addSuggestions(dict.getDictionary().get(i));
 				}
 			}

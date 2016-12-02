@@ -18,7 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 
-public class AnchorPaneCorrectedController implements Initializable{
+public class AnchorPaneCorrectedController implements Initializable {
 	@FXML
 	private ListView<String> listViewSuggestions;
 	@FXML
@@ -56,20 +56,19 @@ public class AnchorPaneCorrectedController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		ArrayList<String> listWord = new ArrayList<String>();
-		
-		for(int i = 0; i < this.suggestions.getSuggestions().size(); i++){
+
+		for (int i = 0; i < this.suggestions.getSuggestions().size(); i++) {
 			listWord.add(suggestions.getSuggestions().get(i).getWord());
 		}
-		
+
 		ObservableList<String> items = FXCollections.observableArrayList(listWord);
-		
-		
-		if(items.isEmpty()){
-			System.out.println("vazio");
-		}else{
-			//fazer mostrar na list view sugestoes
-			listViewSuggestions.setItems(items);
+
+		if (items.isEmpty()) {
+			items.add("Sem sugestões");
 		}
+
+		listViewSuggestions.setItems(items);
+
 	}
 
 }

@@ -7,16 +7,11 @@ import info.debatty.java.stringsimilarity.Levenshtein;
 
 public class Spelling {
 	
-	private Suggestions suggestions;
-
-	public Spelling() {
-		suggestions = new Suggestions();
-	}
-	
 	public Suggestions checkSpelling(Word word){
 		Dictionary dict = new Dictionary();
 		Pattern p = Pattern.compile("[a-z,á,í,ó,ú,é,ä,ï,ö,ü,ë,à,ì,ò,ù,è,ã,õ,â,î,ô,û,ê,ç]+");
 		Matcher matcher = p.matcher(word.getWord().toLowerCase());	
+		Suggestions suggestions = new Suggestions();
 		
 		String temp;
 		Levenshtein l = new Levenshtein();
@@ -37,6 +32,6 @@ public class Spelling {
 			}
 		}
 		
-		return this.suggestions;
+		return suggestions;
 	}
 }

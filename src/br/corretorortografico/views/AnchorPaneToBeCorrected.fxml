@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="438.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.corretorortografico.controllers.AnchorPaneToBeCorrectedController">
+<AnchorPane fx:id="anchorPane" prefHeight="438.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.corretorortografico.controllers.AnchorPaneToBeCorrectedController">
    <children>
       <Button fx:id="buttonCorrigir" layoutX="264.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleButtonCorrigir" text="Corrigir">
          <font>

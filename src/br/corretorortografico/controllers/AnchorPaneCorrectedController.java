@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import br.corretorortografico.models.Suggestions;
 import br.corretorortografico.models.Word;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,18 +23,20 @@ public class AnchorPaneCorrectedController {
 
 	private String[] wordsToBeCorrected;
 	private Suggestions suggestions;
+	
 
 	public void initData(String[] wordsToBeCorrected, Suggestions list) {
 		this.wordsToBeCorrected = wordsToBeCorrected;
 		this.suggestions = list;
 		
-		for(int i=0; i<suggestions.getSuggestions().size(); i++){
-			System.out.println(suggestions.getSuggestions().get(i).getWord());
-		}
-		
 		ObservableList<Word> items = FXCollections.observableArrayList(suggestions.getSuggestions());
-		listViewSuggestions.setItems(items);
 		
+		if(items.isEmpty()){
+			System.out.println("vazio");
+		}else{
+			//fazer mostrar na list view sugestoes
+			listViewSuggestions = new ListView<Word>(items);
+		}
 	}
 
 	@FXML

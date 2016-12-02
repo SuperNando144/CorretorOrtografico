@@ -11,7 +11,7 @@ public class WordDAO {
 	private EntityManager manager;
 
 	public WordDAO() {
-		this.manager = br.corretorortografico.db.JPAUtil.getEntityManager();
+		this.manager = JPAUtil.getEntityManager();
 	}
 
 	@Override

@@ -1,9 +1,14 @@
 package br.corretorortografico.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Suggestions {
 	private List<Word> suggestions;
+	
+	public Suggestions() {
+		suggestions = new ArrayList<Word>();
+	}
 	
 	public List<Word> getSuggestions() {
 		return suggestions;

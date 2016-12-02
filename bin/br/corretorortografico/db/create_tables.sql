@@ -1,0 +1,5 @@
+CREATE TABLE Word(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    word VARCHAR(64) NOT NULL,   
+    PRIMARY KEY(id)
+);
